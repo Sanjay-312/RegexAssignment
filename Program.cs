@@ -13,8 +13,8 @@
 
             switch (option)
             {
-                case 1:
-                    PatternMatching.validate_first_name();
+                case 2:
+                    PatternMatching.validate_last_name();
                     break;
                 
                 default:

@@ -9,32 +9,33 @@ namespace RegexExplanation
 {
     internal class PatternMatching
     {
-        public static void validate_first_name() 
+        public static void validate_last_name()
         {
-            Console.WriteLine("enter first name");
-            string first_name=Console.ReadLine();
+            Console.WriteLine("enter last name");
+            string last_name = Console.ReadLine();
 
             string namepattern = "^[A-Z]{1}[a-zA-Z]{2,}$";
-            Regex regobj=new Regex(namepattern);
+            Regex regobj = new Regex(namepattern);
 
-            if (regobj.IsMatch(first_name))
+            if (regobj.IsMatch(last_name))
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("first name is valid");
+                Console.WriteLine("last name is valid");
                 Console.ResetColor();
-                
+
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("first name is not valid");
+                Console.WriteLine("last name is not valid");
                 Console.ResetColor();
             }
         }
-        
-        
 
-        
-       
+
+
+
+
+
     }
 }
