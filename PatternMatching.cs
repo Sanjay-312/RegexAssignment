@@ -98,6 +98,27 @@ namespace RegexExplanation
                 Console.ResetColor();
             }
         }
+        public static void validate_password()
+        {
+            Console.WriteLine("enter password");
+            string password = Console.ReadLine();
+            string namepattern = "^(?=.*[A-Z]{1,})(?=.*\\d{1,})(?=.*[@#$%^&+=!]{1,}).{8,}$";
+            Regex regobj = new Regex(namepattern);
+
+            if (regobj.IsMatch(password))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("password is valid");
+                Console.ResetColor();
+
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("password is not valid");
+                Console.ResetColor();
+            }
+        }
 
 
 
