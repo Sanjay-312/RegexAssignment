@@ -24,6 +24,9 @@ namespace RegexExplanation
                 case 3:
                     PatternMatching.validate_email();
                     break;
+                case 4:
+                    PatternMatching.validate_mobile_number();
+                    break;
                 default:
                     Console.WriteLine("enter valid input");
                     break;

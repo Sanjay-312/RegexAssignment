@@ -77,6 +77,32 @@ namespace RegexExplanation
             }
         }
 
+        public static void validate_mobile_number()
+        {
+            Console.WriteLine("enter mobile number");
+            string mobilenumber = Console.ReadLine();
+            string namepattern = "^[1-9]{2}[ ]{1}[0-9]{10}$";
+            Regex regobj = new Regex(namepattern);
+
+            if (regobj.IsMatch(mobilenumber))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("mobile number is valid");
+                Console.ResetColor();
+
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("mobile number is not valid");
+                Console.ResetColor();
+            }
+        }
+
+
+
+
+
 
 
 
